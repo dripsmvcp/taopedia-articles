@@ -80,6 +80,17 @@ reserve contexts can therefore produce different outcomes.
 calculation details, but a concept article should keep the distinction simple: pool context affects
 the received amount.
 
+## Relationship to Price Protection
+
+Slippage describes the received-amount difference created by moving through subnet pool reserves.
+Price protection is a guardrail around that movement for staking and unstaking actions: it defines
+whether the action should continue, be limited, or proceed without the protection guardrail when
+price movement crosses the selected boundary. For readers, slippage is the conversion effect, while
+[[price_protection|Price Protection]] is the handling rule for unacceptable movement.
+
+References: [Understanding Slippage](https://docs.learnbittensor.org/learn/slippage),
+[Price Protection](https://docs.learnbittensor.org/learn/price-protection)
+
 ## Reading slippage claims
 
 A slippage claim should say whether it is about staking into alpha-denominated stake, unstaking back
@@ -94,9 +105,11 @@ one-for-one conversion.
 
 - [[staking_and_delegation|Staking and Delegation]]
 - [[dynamic_tao|Dynamic TAO]]
+- [[price_protection|Price Protection]]
 
 ## Further Reading
 
 - [Understanding Slippage](https://docs.learnbittensor.org/learn/slippage)
 - [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets)
 - [Staking/Delegation Overview](https://docs.learnbittensor.org/staking-and-delegation/delegation)
+- [Price Protection](https://docs.learnbittensor.org/learn/price-protection)
