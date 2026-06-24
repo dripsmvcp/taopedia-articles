@@ -27,6 +27,89 @@ The glossary states that Bittensor processes one block every 12 seconds. The
 lists block processing for mainnet and testnet as one block every 12 seconds, while separating those
 network contexts from localnet behavior.
 
+## Relationship to Mempool
+
+Blocks and mempools name opposite sides of transaction inclusion on Subtensor. The
+[Glossary: Mempool](https://docs.learnbittensor.org/resources/glossary#mempool) defines the mempool
+as the place where pending transactions wait, while the
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block) describes a block as
+containing a collection of transactions.
+
+For readers, the mempool is the pre-inclusion waiting period, while a block records which pending
+transactions were accepted and ordered on chain. A transaction leaves the pending mempool context
+once it is included.
+
+References: [Glossary: Mempool](https://docs.learnbittensor.org/resources/glossary#mempool),
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block)
+
+## Relationship to Extrinsics
+
+Blocks and extrinsics name related but different parts of Subtensor activity. An extrinsic is a
+submitted state-changing runtime action, while the
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block) describes a block as
+containing a collection of transactions.
+
+For readers, extrinsics are the submitted actions, while blocks are the units that include and order
+them once accepted on chain.
+
+References: [Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block),
+[Subtensor extrinsics](https://docs.learnbittensor.org/subtensor-api/extrinsics)
+
+## Relationship to Transaction Fees
+
+Blocks and transaction fees address related but different parts of chain activity. The
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block) describes a block as
+containing a collection of transactions, while
+[Transaction Fees in Bittensor](https://docs.learnbittensor.org/learn/fees) describes the costs the
+chain can attach to state-changing actions that may be included there.
+
+For readers, a block names chain ordering and inclusion, while transaction fees describe fee
+accounting for fee-bearing actions recorded inside that block.
+
+References: [Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block),
+[Transaction Fees in Bittensor](https://docs.learnbittensor.org/learn/fees)
+
+## Relationship to Network Context
+
+A block is read inside a specific Bittensor network environment. The
+[Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference
+separates mainnet, testnet, and localnet as deployment contexts, and block history belongs to
+whichever network environment produced it.
+
+For readers, this keeps block records network-scoped rather than network-agnostic. A mainnet block,
+a testnet block, and a localnet block all describe the same block concept, but each one is read
+against the network context it belongs to.
+
+References: [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks),
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block)
+
+## Relationship to Subtensor
+
+Blocks are recorded on the Subtensor chain layer. The official
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor) defines
+Subtensor as Bittensor's layer 1 blockchain and system of record for transactions, while the
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block) describes a block as
+containing a collection of transactions with a unique block hash.
+
+For readers, Subtensor names the blockchain layer, while a block names one ordered unit of chain
+data recorded inside that layer.
+
+References: [Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor),
+[Glossary: Block](https://docs.learnbittensor.org/resources/glossary#block)
+
+## Relationship to Multiple Mechanisms
+
+A block records accepted chain actions on Subtensor. The
+[Glossary](https://docs.learnbittensor.org/resources/glossary#weight-matrix) notes that each
+incentive mechanism has its own weight matrix for independent consensus calculations.
+
+For readers, a block still names chain ordering and inclusion. Weight-related actions inside a block
+should be read with per-mechanism matrix context when relevant.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)
+
 ## Reader Boundary
 
 This article defines the term at a high level. It does not describe transaction submission, endpoint

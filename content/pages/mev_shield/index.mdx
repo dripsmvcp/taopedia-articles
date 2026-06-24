@@ -51,6 +51,20 @@ encrypted mempool-protection model, and the
 [MEV Shield SDK guide](https://docs.learnbittensor.org/sdk/mev-protection) gives the same
 encrypt-and-submit flow at a lower interface level.
 
+## Relationship to Mempool Visibility
+
+MEV Shield and mempool visibility address opposite sides of the same pre-inclusion risk. Mempool
+visibility names whether sensitive pending transaction details are exposed before block inclusion,
+while the [MEV Shield](https://docs.learnbittensor.org/concepts/mev-shield/) feature encrypts those
+contents during the wait.
+
+For readers, mempool visibility describes the exposure problem, while MEV Shield describes one
+official defense against that visibility risk. Hiding details does not remove every other
+transaction risk.
+
+References: [MEV Shield](https://docs.learnbittensor.org/concepts/mev-shield/),
+[Glossary: Mempool](https://docs.learnbittensor.org/resources/glossary#mempool)
+
 ## Relationship to price protection
 
 MEV Shield and price protection address related but different risks. MEV Shield hides transaction
@@ -82,6 +96,20 @@ inclusion. The [MEV Shield page](https://docs.learnbittensor.org/concepts/mev-sh
 feature to encrypted mempool protection, and
 [Price Protection](https://docs.learnbittensor.org/learn/price-protection) covers the separate
 price-movement controls.
+
+## Relationship to Multiple Mechanisms
+
+MEV Shield conceals sensitive transaction contents until block inclusion, the same visibility window
+[Commit Reveal](https://docs.learnbittensor.org/concepts/commit-reveal) uses around fresh validator
+weights. The [Glossary](https://docs.learnbittensor.org/resources/glossary#weight-matrix) notes that
+each incentive mechanism has its own weight matrix for independent consensus calculations.
+
+For readers, encrypted mempool protection applies to pending chain actions. Weight concealment still
+operates per mechanism when a subnet runs more than one incentive path.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)
 
 ## Relation to nearby concepts
 
