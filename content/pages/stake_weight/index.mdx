@@ -39,6 +39,24 @@ as combining alpha stake and TAO stake through the TAO weight concept. The impor
 point is that stake weight is not simply one asset balance. It is a subnet-context measure used when
 validator influence is interpreted inside that subnet.
 
+## Relationship to TAO Weight
+
+Stake weight and TAO weight are related but not interchangeable. Stake weight is the computed
+validator influence measure used inside subnet consensus, while TAO weight is the global parameter
+that describes how TAO stake is weighted relative to alpha stake before that influence is computed.
+The [Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight)
+connects stake weight to validator consensus power, and
+[Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight) frames TAO
+weight as the relative influence parameter for TAO stake.
+
+For readers, TAO weight is an input to the stake-weight context. Stake weight names the resulting
+subnet consensus influence; TAO weight names how one component of staked value is treated in that
+calculation.
+
+References:
+[Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Glossary: TAO Weight](https://docs.learnbittensor.org/resources/glossary#tao-weight)
+
 ## Relationship to Subnets
 
 Subnets define the work miners produce and the evaluation standards validators apply.
@@ -46,6 +64,59 @@ Subnets define the work miners produce and the evaluation standards validators a
 validators evaluate miner work according to subnet rules before those evaluations feed Yuma
 Consensus. Stake weight belongs in that same subnet context because validator influence depends on
 how stake is represented for the subnet being evaluated.
+
+## Relationship to Validator Permit
+
+Stake weight and validator permit refer to related but different parts of subnet validation. The
+[Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight) describes
+stake weight as the computed stake value that determines a validator's consensus power and emissions
+in a subnet. The
+[Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)
+describes a validator permit as a boolean flag for whether a subnet participant has validation
+rights.
+
+For readers, stake weight names the stake-based measure of validator influence, while validator
+permit names the permission flag for validation rights that is awarded by stake-weight position. A
+stake weight should not be read as a permit itself, only as the input that permit allocation is
+based on.
+
+References:
+[Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Glossary: Validator Permit](https://docs.learnbittensor.org/resources/glossary#validator-permit)
+
+## Relationship to Effective Stake
+
+Stake weight and effective stake refer to related but different parts of validator staking. The
+[Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight) describes
+stake weight as the computed stake value that determines a validator's consensus power and emissions
+in a subnet. The
+[Glossary: Effective Stake](https://docs.learnbittensor.org/resources/glossary#effective-stake)
+describes effective stake as the total staked TAO amount of a delegate, including the delegate's own
+TAO and TAO delegated by nominators.
+
+For readers, effective stake names the combined staked TAO amount associated with a delegate, while
+stake weight names the computed value that turns that stake into consensus influence inside a
+subnet. Stake weight should not be read as the same amount as effective stake, only as the
+subnet-level measure derived from it.
+
+References:
+[Glossary: Stake Weight](https://docs.learnbittensor.org/resources/glossary#stake-weight),
+[Glossary: Effective Stake](https://docs.learnbittensor.org/resources/glossary#effective-stake)
+
+## Relationship to Multiple Mechanisms
+
+Stake weight is usually discussed for one incentive mechanism at a time, but subnets can also run
+multiple mechanisms in parallel. The
+[Glossary](https://docs.learnbittensor.org/resources/glossary#weight-matrix) notes that each
+mechanism has its own weight matrix for independent consensus calculations.
+
+For readers, stake weight still describes validator influence inside a subnet, but the mechanism
+context matters. Influence tied to one mechanism's weight matrix should not be read as describing
+another when a subnet uses more than one evaluation system.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)
 
 ## Interpretation Boundaries
 

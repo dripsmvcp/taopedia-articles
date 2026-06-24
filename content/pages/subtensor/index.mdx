@@ -60,6 +60,77 @@ transactions, rankings, Yuma Consensus, and liquidity emission.
 At an article level, this makes Subtensor the protocol context for recording activity and supporting
 incentive flow, not a guide to running infrastructure or a catalog of interface methods.
 
+## Relationship to Mainchain
+
+Subtensor and Mainchain name related but distinct concepts. The
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor) describes
+Bittensor's layer 1 blockchain and the system of record for transactions and rankings, while the
+[Glossary: Mainchain](https://docs.learnbittensor.org/resources/glossary#mainchain) describes the
+primary Bittensor network used for production purposes.
+
+For readers, Subtensor is the chain layer that records transactions and rankings, while Mainchain is
+the production network context that runs on that layer. A mainnet example belongs to production
+context without replacing the chain-layer meaning of Subtensor.
+
+References: [Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor),
+[Glossary: Mainchain](https://docs.learnbittensor.org/resources/glossary#mainchain)
+
+## Relationship to Public Subtensor
+
+Subtensor and Public Subtensor are related but name different layers of the same picture. The
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor) describes
+Bittensor's layer 1 blockchain and the system of record for transactions and rankings, while the
+[Glossary: Public Subtensor](https://docs.learnbittensor.org/resources/glossary#public-subtensor)
+describes publicly reachable access to that chain layer.
+
+For readers, Subtensor is the chain layer itself, while Public Subtensor names live public access to
+it. Public access context does not replace the chain-layer meaning of Subtensor.
+
+References: [Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor),
+[Glossary: Public Subtensor](https://docs.learnbittensor.org/resources/glossary#public-subtensor)
+
+## Relationship to Bittensor Networks
+
+Subtensor and Bittensor Networks name related but different parts of the Bittensor stack. The
+[Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference groups
+mainnet, testnet, and localnet, while the
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor) describes
+Bittensor's layer 1 blockchain and the system of record for transactions and rankings.
+
+For readers, Bittensor Networks is the environment label, while Subtensor is the chain layer that
+records activity in each environment. The same Subtensor concept applies across network contexts,
+but production, test, and local settings are still read separately.
+
+References: [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks),
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor)
+
+## Relationship to Local Blockchain
+
+Subtensor and local blockchain refer to related but different parts of Bittensor chain context. The
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor) describes
+Bittensor's layer 1 blockchain and the system of record for transactions and rankings. The
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+describes a private, isolated chain used for developing and testing subnet incentive mechanisms.
+
+For readers, Subtensor is the chain-layer concept, while local blockchain is a private development
+environment rather than production Mainchain behavior.
+
+References: [Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor),
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+
+## Relationship to Multiple Mechanisms
+
+Subtensor records transactions and validator rankings on chain. The
+[Glossary](https://docs.learnbittensor.org/resources/glossary#weight-matrix) notes that each
+incentive mechanism has its own weight matrix for independent consensus calculations.
+
+For readers, Subtensor still names the blockchain layer. Weight-matrix context should be read per
+mechanism when a subnet runs more than one incentive mechanism.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Weight Matrix](https://docs.learnbittensor.org/resources/glossary#weight-matrix)
+
 ## Reader Boundary
 
 Subtensor is the Bittensor blockchain layer, not the same thing as a particular subnet, subnet
