@@ -59,6 +59,26 @@ reveal model, and the
 [Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor) page
 places it in the weight-copying context.
 
+## Relationship to Consensus-Based Weights
+
+Consensus-based weights, also called liquid alpha, are a second protocol-side tool against weight
+copying. Where delayed visibility makes fresh weights less useful to copy, consensus-based weights
+adjust bond smoothing by consensus alignment, so out-of-line — including copied or stale — weights
+carry less bond influence where liquid alpha is active. The
+[Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor) page
+places liquid alpha alongside delayed weight visibility as tools that help validators identify
+useful miners and bond to them quickly, and the
+[Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights) page
+defines the mechanism.
+
+For readers, delayed visibility and consensus-based weights are complementary defenses rather than
+alternatives: one limits how current a copied view can be, while the other can limit how much a
+copied view shapes bond outcomes.
+
+References:
+[Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor),
+[Consensus-based Weights](https://docs.learnbittensor.org/concepts/consensus-based-weights)
+
 ## What copying does not prove
 
 Similar weights do not automatically prove malicious copying. Validators can legitimately converge
@@ -80,6 +100,90 @@ design needs measurable work and evaluation rules. The
 [Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor) and
 [Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) pages define the consensus
 boundary for this article.
+
+## Relationship to Multiple Mechanisms
+
+Weight copying weakens independent validator evaluation inside a subnet. The
+[Glossary](https://docs.learnbittensor.org/resources/glossary#multiple-incentive-mechanisms) notes
+that validators must evaluate miners separately for each mechanism and that each mechanism has its
+own weight matrix.
+
+For readers, weight copying still names dependence on public weight signals. Copied-weight concerns
+should be read separately per mechanism when a subnet runs more than one evaluation system.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Multiple Incentive Mechanisms](https://docs.learnbittensor.org/resources/glossary#multiple-incentive-mechanisms)
+
+## Relationship to Yuma Consensus
+
+Weight copying and Yuma Consensus address related but different parts of Bittensor subnet incentive
+flow. Weight copying names dependence on public validator weight signals instead of independent
+evaluation, while Yuma Consensus aggregates independently submitted validator weights into miner
+incentives and validator dividends. The
+[Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)
+documentation describes the free-riding behavior, and
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus) describes how validator
+weights become consensus inputs.
+
+For readers, weight copying names a quality problem in validator evaluation inputs, while Yuma
+Consensus names the aggregation step that still depends on those inputs being meaningfully
+independent.
+
+References:
+[The Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor),
+[Yuma Consensus](https://docs.learnbittensor.org/learn/yuma-consensus)
+
+## Relationship to Validator Weights
+
+Weight copying and validator weights address related but different parts of subnet evaluation
+structure. Validator weights are the evaluation signals validators submit for miners, while weight
+copying describes when a validator relies on public weight information instead of producing an
+independent evaluation. The
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights)
+describes the per-validator evaluation inputs, and the
+[Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)
+documentation describes copied or derived weights as the problem behavior.
+
+For readers, validator weights name the evaluation submission concept, while weight copying names
+when those submissions fail to add independent information.
+
+References:
+[Glossary: Validator Weights](https://docs.learnbittensor.org/resources/glossary#validator-weights),
+[The Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)
+
+## Relationship to Tempo
+
+Weight copying and tempo are related but different parts of subnet timing vocabulary. Tempo names
+the block-based cadence that governs epoch transitions inside a subnet, while weight copying matters
+because freshly visible validator weights can be valuable during that periodic work. Delayed
+visibility across part of a tempo can reduce how useful copied weight information remains. The
+[Glossary: Tempo](https://docs.learnbittensor.org/resources/glossary#tempo) describes tempo as the
+subnet-specific cadence for epochs, and the
+[Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)
+documentation connects copied weights to degraded subnet quality.
+
+For readers, tempo names the subnet's periodic cadence, while weight copying names a validator
+evaluation problem that timing defenses can make harder to exploit within that cadence.
+
+References: [Glossary: Tempo](https://docs.learnbittensor.org/resources/glossary#tempo),
+[The Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)
+
+## Relationship to Epoch
+
+Weight copying and an epoch address related but different parts of subnet consensus timing. An epoch
+names the consensus period inside a subnet, while weight copying describes when validator
+evaluations within that period add less independent information because they depend on public weight
+signals. The [Glossary: Epoch](https://docs.learnbittensor.org/resources/glossary#epoch) describes
+the subnet consensus period, and the
+[Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)
+documentation frames copied weights as weakening independent evaluation during consensus work.
+
+For readers, an epoch names the time window for subnet consensus work, while weight copying names an
+evaluation-quality problem that can reduce useful validator diversity inside that window.
+
+References: [Glossary: Epoch](https://docs.learnbittensor.org/resources/glossary#epoch),
+[The Weight Copying Problem](https://docs.learnbittensor.org/concepts/weight-copying-in-bittensor)
 
 ## Related articles
 
