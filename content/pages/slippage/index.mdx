@@ -80,6 +80,21 @@ reserve contexts can therefore produce different outcomes.
 calculation details, but a concept article should keep the distinction simple: pool context affects
 the received amount.
 
+## Relationship to Price Protection
+
+Slippage describes the difference between an expected amount and the amount actually received
+through a pool conversion. Price protection is a control around that movement: it decides whether a
+staking-related action should continue, be limited, or proceed without the guardrail when the
+slippage would be unacceptable.
+[Understanding Slippage](https://docs.learnbittensor.org/learn/slippage) defines the staking and
+unstaking slippage concept, and
+[Price Protection](https://docs.learnbittensor.org/learn/price-protection) defines the protection
+choices.
+
+For readers, slippage names the outcome difference, while price protection names how an action
+handles that difference. The two describe different sides of a pool conversion: the movement itself
+and the guardrail around it.
+
 ## Reading slippage claims
 
 A slippage claim should say whether it is about staking into alpha-denominated stake, unstaking back
@@ -89,6 +104,35 @@ particular subnet need the exact source behind those figures. The safer general 
 [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) is that
 slippage appears because Bittensor subnet activity uses pool reserves rather than a fixed
 one-for-one conversion.
+
+## Relationship to MEV Shield
+
+Slippage and MEV Shield address different parts of adverse movement risk during Bittensor activity.
+Slippage names the difference between an expected pool-conversion amount and the amount actually
+received, while [MEV Shield](https://docs.learnbittensor.org/concepts/mev-shield/) encrypts
+sensitive pre-inclusion transaction details so pending information is less exposed.
+
+For readers, slippage describes a pool-conversion outcome difference, while MEV Shield is a
+pre-inclusion protection against MEV exposure. Price protection is the closer guardrail for slippage
+itself; MEV Shield addresses a different layer of risk.
+
+References: [Understanding Slippage](https://docs.learnbittensor.org/learn/slippage),
+[MEV Shield](https://docs.learnbittensor.org/concepts/mev-shield/),
+[Price Protection](https://docs.learnbittensor.org/learn/price-protection)
+
+## Relationship to Multiple Mechanisms
+
+Slippage appears when staking or unstaking converts through a subnet pool's TAO and alpha reserves.
+The [Glossary](https://docs.learnbittensor.org/resources/glossary#incentive-mechanism) notes that
+each subnet has one or more incentive mechanisms.
+
+For readers, slippage still names a pool-conversion outcome difference. A subnet may run more than
+one incentive mechanism, but slippage belongs to the shared pool context rather than to one
+mechanism label.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Incentive Mechanism](https://docs.learnbittensor.org/resources/glossary#incentive-mechanism)
 
 ## Related articles
 

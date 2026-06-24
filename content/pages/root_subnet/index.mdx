@@ -35,12 +35,42 @@ The [Glossary](https://docs.learnbittensor.org/resources/glossary#root-subnetsub
 why subnet-agnostic Root staking matters for validator weight: a validator's weight in a subnet
 includes both their share of that subnet's alpha and their share of staked TAO in Subnet Zero.
 
+## Relationship to Root Claims
+
+The Root Subnet and root claims address related but different parts of Bittensor staking context.
+The [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets) overview
+describes the Root Subnet as a special subnet where validators register and TAO holders can stake in
+a subnet-agnostic way, while the
+[Root Claim Overview](https://docs.learnbittensor.org/staking-and-delegation/root-claims) describes
+how alpha dividends from that stake are handled.
+
+For readers, the Root Subnet is the staking environment, while root claims name the
+dividend-handling mechanism for stake placed there.
+
+References: [Understanding Subnets](https://docs.learnbittensor.org/subnets/understanding-subnets),
+[Root Claim Overview](https://docs.learnbittensor.org/staking-and-delegation/root-claims)
+
 ## Relationship to Related Terms
 
 Root Subnet is the base term. Root claims describe how dividends are handled for stake placed
 through Root, while root proportion describes how much of a subnet's dividend context is attributed
 to Root-routed TAO stake. Those related terms should not be treated as the same concept as Root
 Subnet itself.
+
+## Relationship to Multiple Mechanisms
+
+The Root Subnet is a special subnet where miners cannot register and no validation work is
+performed. The
+[Glossary](https://docs.learnbittensor.org/resources/glossary#multiple-incentive-mechanisms) notes
+that validators must evaluate miners separately for each mechanism when a subnet runs more than one
+incentive mechanism.
+
+For readers, Root Subnet still names subnet-agnostic validator staking. That special role is
+separate from the per-mechanism miner evaluation context used in ordinary subnets.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Multiple Incentive Mechanisms](https://docs.learnbittensor.org/resources/glossary#multiple-incentive-mechanisms)
 
 ## Reader Boundary
 

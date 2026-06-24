@@ -37,6 +37,53 @@ References:
 [Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain),
 [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks)
 
+## Relationship to Public Subtensor
+
+Local blockchain and Public Subtensor name opposite sides of Bittensor chain access. The
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+describes a private chain used for development and testing, while the
+[Glossary: Public Subtensor](https://docs.learnbittensor.org/resources/glossary#public-subtensor)
+describes publicly reachable chain access.
+
+For readers, local blockchain names isolated development context, while Public Subtensor names live
+network access context. Outputs from a local chain should not be treated as public Subtensor state.
+
+References:
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain),
+[Glossary: Public Subtensor](https://docs.learnbittensor.org/resources/glossary#public-subtensor)
+
+## Relationship to Bittensor Networks
+
+Local blockchain and Bittensor Networks name related but different parts of network context. The
+[Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks) reference includes
+localnet as a user-controlled development environment, while the
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+describes the private chain used in that setting.
+
+For readers, localnet is the environment label, while local blockchain names the isolated
+development chain itself. Mainnet and testnet belong to other network contexts rather than to local
+blockchain by default.
+
+References: [Bittensor Networks](https://docs.learnbittensor.org/concepts/bittensor-networks),
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+
+## Relationship to Non-fast Blocks
+
+Local blockchain and non-fast blocks are related but name different parts of local development
+context. The
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+describes a private chain used for development and testing, while the
+[Glossary: Non-fast blocks](https://docs.learnbittensor.org/resources/glossary#non-fast-blocks)
+describes ordinary local block timing that follows Subtensor's default 12-second interval.
+
+For readers, local blockchain is the isolated development chain, while non-fast blocks are a timing
+setting used within it to simulate production-like intervals. Neither term describes live mainnet
+behavior on its own.
+
+References:
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain),
+[Glossary: Non-fast blocks](https://docs.learnbittensor.org/resources/glossary#non-fast-blocks)
+
 ## Relationship to Fast Blocks
 
 Fast blocks are described in official documentation as a development-only local-chain timing
@@ -44,6 +91,51 @@ configuration. Local blockchain context explains why that distinction matters: f
 production can help testing while remaining separate from public Bittensor network behavior.
 
 Reference: [Glossary: Fast blocks](https://docs.learnbittensor.org/resources/glossary#fast-blocks)
+
+## Relationship to Mainchain
+
+Local blockchain and Mainchain name opposite sides of Bittensor network context. The
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+describes a private chain used for development and testing, while the
+[Glossary: Mainchain](https://docs.learnbittensor.org/resources/glossary#mainchain) describes the
+primary Bittensor network used for production purposes.
+
+For readers, local blockchain is isolated development context, while Mainchain is production network
+context. Local blockchain should not be read as a stand-in for Mainchain behavior.
+
+References:
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain),
+[Glossary: Mainchain](https://docs.learnbittensor.org/resources/glossary#mainchain)
+
+## Relationship to Subtensor
+
+Local blockchain and Subtensor refer to related but different parts of Bittensor chain context. The
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain)
+describes a private, isolated chain used for developing and testing subnet incentive mechanisms. The
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor) describes
+Bittensor's layer 1 blockchain and the system of record for transactions and rankings.
+
+For readers, local blockchain is a private development environment, while Subtensor is the
+chain-layer concept. Local blockchain should not be read as a replacement for production Subtensor
+context.
+
+References:
+[Glossary: Local Blockchain](https://docs.learnbittensor.org/resources/glossary#local-blockchain),
+[Glossary: Subtensor](https://docs.learnbittensor.org/resources/glossary#subtensor)
+
+## Relationship to Multiple Mechanisms
+
+A local blockchain provides an isolated chain for Bittensor development and testing. The
+[Glossary](https://docs.learnbittensor.org/resources/glossary#local-blockchain) describes it as used
+for developing and testing subnet incentive mechanisms.
+
+For readers, a local blockchain still names a private development environment. Subnets tested there
+may later run more than one incentive mechanism in production, but the local chain itself is not a
+mechanism label.
+
+References:
+[Multiple Incentive Mechanisms Within Subnets](https://docs.learnbittensor.org/subnets/understanding-multiple-mech-subnets),
+[Glossary: Incentive Mechanism](https://docs.learnbittensor.org/resources/glossary#incentive-mechanism)
 
 ## Reader Boundary
 
